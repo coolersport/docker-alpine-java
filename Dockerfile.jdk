@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u162b12_server-jre_unlimited
+FROM anapsix/alpine-java:8u162b12_jdk_unlimited
 
 MAINTAINER Tien Tran
 

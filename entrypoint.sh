@@ -11,7 +11,7 @@ if [[ -f "$CA_CERTIFICATE" ]]; then
 		openssl pkcs12 -export -in $CERTIFICATE -inkey $CERTIFICATE_KEY \
 		    -out keystore.p12 -CAfile $CA_CERTIFICATE -caname "Root CA" -password pass:$STORE_PASS
 		keytool -importkeystore \
-		    -deststorepass $STORE_PASS -destkeypass $KEY_PASS -destkeystore keystore.jks \
+		    -deststorepass $STORE_PASS -destkeypass $KEY_PASS -destkeystore /keystore.jks \
 	        -srckeystore keystore.p12 -srcstoretype PKCS12 -srcstorepass $STORE_PASS
 	    rm -rf keystore.p12
 	fi
